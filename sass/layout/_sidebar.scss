@@ -1,0 +1,84 @@
+@use "../abstracts" as abs;
+
+.sidebar {
+    padding: 48px 30px;
+    @include abs.bg(#fff);
+    color: abs.$sidebar-text-color;
+    border-right: 1px solid abs.$block-border
+}
+
+.logo {
+    display: block;
+    margin-bottom: 44px; 
+}
+
+.menu {
+    $gap: 26px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    color: abs.$sidebar-text-color;
+
+    &:not(:last-child):after {
+        content: "";
+        display: block;
+        height: 1px;
+        background-color: abs.$sidebar-menu-border;
+        margin-block: $gap;
+    }
+
+    &-title {
+        font-size: 13px;
+        line-height: 146%;  
+        margin-bottom: 10px;
+        padding: 0 21px;
+    }
+
+    &-link {
+        position: relative;
+        overflow: hidden;
+        padding: 8px 30px 8px 20px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 500;
+        color: abs.$sidebar-text-color;
+        font-size: 14px;
+        line-height: 143%;
+        text-transform: capitalize;
+        z-index: 0;
+        transition: all 0.2s linear;
+
+        &::after {
+            content: "";
+            border-radius: inherit;
+            position: absolute;
+            inset: 0;
+            background: abs.$linear-active;
+            background-repeat: no-repeat;
+            transform: translateX(-100%);
+            transition: all 0.2s linear;
+            z-index: -1;
+        }
+        &:hover {
+            color: #fff;
+            &::after {
+                transform: translateX(0)
+            }
+            [fill^="#E5"] {
+                fill: #fff;
+                opacity: 1;
+            }
+            [fill^="#A5"] {
+                fill: abs.$primary4;
+                mix-blend-mode: normal;
+            }
+
+        }
+    }
+
+    &-icon {
+        flex: 0 0 24px;
+    }
+}

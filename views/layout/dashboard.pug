@@ -1,0 +1,24 @@
+include ../mixins/mixins
+
+doctype html
+html(lang="en")
+      head
+            meta(charset="UTF-8")
+            meta(name="viewport", content="width=device-width, initial-scale=1.0")
+            block title 
+                  title GoCast UI
+            link(rel="shortcut icon", href="https://images.squarespace-cdn.com/content/v1/5713e36eb6aa60f0aa6c6d93/6a3c1412-b982-4973-98b3-22071a71a604/Oro_Rotate.gif", type="image/x-icon")
+            link(rel="preconnect", href="https://fonts.googleapis.com")
+            link(rel="preconnect", href="https://fonts.gstatic.com", crossorigin)
+            link(href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=IBM+Plex+Sans:wght@400;500;600;700&display=swap", rel="stylesheet")
+            block stylesheet 
+                  link(rel="stylesheet", href="./styles/app.css")
+
+      body 
+            .wrapper 
+                  include ./sidebar
+                  main.main 
+                        include ./header 
+                        block main
+            script(src="./js/app.js") 
+

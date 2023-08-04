@@ -1,0 +1,11 @@
+// Kwt cau
+@use "../abstracts" as abs;
+
+.wrapper {
+      max-width: 1440px;
+      min-height: 100vh;
+      margin: 0 auto;
+      background-color: abs.$bg-color;
+      display: grid;
+      grid-template-columns: 256px minmax(0, 1fr);
+}

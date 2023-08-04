@@ -1,0 +1,141 @@
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font: inherit;
+}
+
+img,
+picture,
+svg,
+video {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+select,
+textarea {
+  background-color: transparent;
+  outline: none;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  outline: none;
+  border: 0;
+}
+
+body {
+  min-height: 100vh;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul, ol {
+  list-style-type: none;
+}
+
+body {
+  font-family: "IBM Plex Sans", sans-serif;
+  color: hsl(220, 10%, 12%);
+  font-weight: 400;
+}
+
+.sidebar {
+  padding: 48px 30px;
+  background-color: #fff;
+  color: hsl(215, 19%, 59%);
+  border-right: 1px solid #F0F3F6;
+}
+
+.logo {
+  display: block;
+  margin-bottom: 44px;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  color: hsl(215, 19%, 59%);
+}
+.menu:not(:last-child):after {
+  content: "";
+  display: block;
+  height: 1px;
+  background-color: #E9EEF4;
+  margin-block: 26px;
+}
+.menu-title {
+  font-size: 13px;
+  line-height: 146%;
+  margin-bottom: 10px;
+  padding: 0 21px;
+}
+.menu-link {
+  position: relative;
+  overflow: hidden;
+  padding: 8px 30px 8px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 500;
+  color: hsl(215, 19%, 59%);
+  font-size: 14px;
+  line-height: 143%;
+  text-transform: capitalize;
+  z-index: 0;
+  transition: all 0.2s linear;
+}
+.menu-link::after {
+  content: "";
+  border-radius: inherit;
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(142deg, #415EF4 0%, #7141EF 100%);
+  background-repeat: no-repeat;
+  transform: translateX(-100%);
+  transition: all 0.2s linear;
+  z-index: -1;
+}
+.menu-link:hover {
+  color: #fff;
+}
+.menu-link:hover::after {
+  transform: translateX(0);
+}
+.menu-link:hover [fill^="#E5"] {
+  fill: #fff;
+  opacity: 1;
+}
+.menu-link:hover [fill^="#A5"] {
+  fill: #A79EE5;
+  mix-blend-mode: normal;
+}
+.menu-icon {
+  flex: 0 0 24px;
+}
+
+.wrapper {
+  max-width: 1440px;
+  min-height: 100vh;
+  margin: 0 auto;
+  background-color: hsl(0, 100%, 100%);
+  display: grid;
+  grid-template-columns: 256px minmax(0, 1fr);
+}
+
+/*# sourceMappingURL=app.css.map */
