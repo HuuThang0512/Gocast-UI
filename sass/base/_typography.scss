@@ -1,6 +1,10 @@
 @use "../abstracts" as abs;
 body {
       font-family: abs.$font-primary;
+      font-size: 15px;
       color: abs.$text-black1;
       font-weight: 400;
+      text-rendering: optimizeLegibility;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
 }
