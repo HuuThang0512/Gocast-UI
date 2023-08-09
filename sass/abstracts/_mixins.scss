@@ -31,3 +31,15 @@
         font-weight: 700;
     }
 }
+
+@mixin screenMW($value) {
+    @media screen and (min-width: $value) {
+        @content;
+    }
+}
+
+@mixin textGradient() {
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

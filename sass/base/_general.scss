@@ -1,0 +1,8 @@
+@use "../abstracts" as abs;
+
+.heading {
+    --mb: 0;
+    font-weight: 600;
+    color: abs.$black1;
+    margin-bottom: var(--mb);
+}

@@ -71,11 +71,44 @@ ul, ol {
 body {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 15px;
-  color: hsl(220, 10%, 12%);
+  color: #1c1e22;
   font-weight: 400;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+.heading {
+  --mb: 0;
+  font-weight: 600;
+  color: #1B1D21;
+  margin-bottom: var(--mb);
+}
+
+.button {
+  --gap: 8px;
+  --fw: 600;
+  background-color: #6C5DD3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 8px;
+  gap: var(--gap);
+  font-style: normal;
+  font-size: 15px;
+  line-height: 1.46;
+  color: #FCFCFC;
+  font-weight: var(--fw);
+  transition: all 0.1s linear;
+}
+.button--primary {
+  color: #FCFCFC;
+  background-color: #6C5DD3;
 }
 
 .topbar {
@@ -132,21 +165,9 @@ body {
 }
 
 .btn-upload {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #6C5DD3;
-  display: flex;
-  align-items: center;
+  --gap: 6px;
   padding: 12px 16px;
-  border-radius: 8px;
-  gap: 6px;
-}
-.btn-upload-text {
-  color: #FCFCFC;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 146%;
+  height: 48px;
 }
 
 .sidebar {
@@ -232,6 +253,10 @@ body {
   background-color: hsl(0, 100%, 100%);
   display: grid;
   grid-template-columns: 256px minmax(0, 1fr);
+}
+
+.main-container {
+  padding: 37px 56px;
 }
 
 /*# sourceMappingURL=app.css.map */

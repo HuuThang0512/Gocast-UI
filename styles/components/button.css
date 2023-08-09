@@ -1,0 +1,23 @@
+.button {
+  --gap: 8px;
+  --fw: 600;
+  background-color: #6C5DD3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 14px;
+  border-radius: 8px;
+  gap: var(--gap);
+  font-style: normal;
+  font-size: 15px;
+  line-height: 1.46;
+  color: #FCFCFC;
+  font-weight: var(--fw);
+  transition: all 0.1s linear;
+}
+.button--primary {
+  color: #FCFCFC;
+  background-color: #6C5DD3;
+}
+
+/*# sourceMappingURL=button.css.map */
