@@ -6,3 +6,9 @@
     color: abs.$black1;
     margin-bottom: var(--mb);
 }
+
+@media screen and (min-width: 1440px) {
+    .wrapper {
+        max-width: auto;
+    }
+}

@@ -16,6 +16,7 @@
     color: abs.$neutral1;
     font-weight: var(--fw);
     transition: all 0.1s linear;
+    cursor: pointer;
     &--primary {
         color: abs.$neutral1;
         background-color: abs.$primary-color;

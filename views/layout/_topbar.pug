@@ -3,9 +3,12 @@
         img.search-icon(src="./images/icons/icon-search.svg", alt="icon-search")
         input.search-input(type="text" placeholder="Search 2+ million podcasts and listeners")
     .topbar-right
-        button.button.button--primary.btn-upload.button-primary
-            img.btn-upload-icon(src="./images/icons/icon-upload.svg", alt="upload-icon")
-            span.btn-upload-text Upload
+        //- button.button.button--primary.btn-upload.button-primary
+        .upload
+            label(for="upload-file").button.button--primary.btn-upload.button-primary
+                img.btn-upload-icon(src="./images/icons/icon-upload.svg", alt="upload-icon")
+                span.btn-upload-text Upload
+            input#upload-file(type="file", name="").upload-input
         a.topbar-right-action.action-icon(href="#") 
             img(src="./images/icons/icon-message.svg", alt="message-icon")
         a.topbar-right-action.action-icon.new(href="#") 
