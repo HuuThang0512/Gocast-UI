@@ -1,0 +1,25 @@
+@use "../abstracts" as abs;
+
+.toggle {
+    @include abs.size(30px, 17px);
+    display: flex;
+    align-items: center;    
+    border-radius: 100rem;
+    padding: 2px;
+    background-color: abs.$gray2;
+    cursor: pointer;
+    &-spinner {
+        border-radius: 100rem;
+        background-color: #fff;
+        width: 14px;
+        aspect-ratio: 1;
+        transition: all 0.1s linear;
+    }
+
+    &.active {
+        background: abs.$linear-active;
+    }
+    &.active &-spinner {
+       transform: translate(12px);
+    }
+}

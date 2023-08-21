@@ -85,15 +85,15 @@ h1, h2, h3, h4, h5, h6 {
 .heading {
   --mb: 0;
   font-weight: 600;
+  line-height: 1.5;
   color: #1B1D21;
   margin-bottom: var(--mb);
 }
 
-@media screen and (min-width: 1440px) {
-  .wrapper {
-    max-width: auto;
-  }
+.icon {
+  cursor: pointer;
 }
+
 .button {
   --gap: 8px;
   --fw: 600;
@@ -115,6 +115,30 @@ h1, h2, h3, h4, h5, h6 {
 .button--primary {
   color: #FCFCFC;
   background-color: #6C5DD3;
+}
+
+.toggle {
+  width: 30px;
+  height: 17px;
+  display: flex;
+  align-items: center;
+  border-radius: 100rem;
+  padding: 2px;
+  background-color: #A6A7B2;
+  cursor: pointer;
+}
+.toggle-spinner {
+  border-radius: 100rem;
+  background-color: #fff;
+  width: 14px;
+  aspect-ratio: 1;
+  transition: all 0.1s linear;
+}
+.toggle.active {
+  background: linear-gradient(142deg, #415EF4 0%, #7141EF 100%);
+}
+.toggle.active .toggle-spinner {
+  transform: translate(12px);
 }
 
 .topbar {
@@ -185,6 +209,11 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #fff;
   color: hsl(215, 19%, 59%);
   border-right: 1px solid #F0F3F6;
+}
+@media screen and (max-width: 1279.98px) {
+  .sidebar {
+    display: none;
+  }
 }
 
 .logo {
@@ -267,6 +296,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-container {
   padding: 37px 56px;
+}
+
+@media screen and (max-width: 1279.98px) {
+  .wrapper {
+    grid-template-columns: 1fr;
+  }
+  .main-container {
+    padding: 24px;
+  }
 }
 
 /*# sourceMappingURL=app.css.map */

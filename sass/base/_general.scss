@@ -3,12 +3,17 @@
 .heading {
     --mb: 0;
     font-weight: 600;
+    line-height: 1.5;
     color: abs.$black1;
     margin-bottom: var(--mb);
 }
 
-@media screen and (min-width: 1440px) {
-    .wrapper {
-        max-width: auto;
-    }
+.icon {
+    cursor: pointer;
 }
+
+// @media screen and (min-width: 1440px) {
+//     .wrapper {
+//         max-width: auto;
+//     }
+// }

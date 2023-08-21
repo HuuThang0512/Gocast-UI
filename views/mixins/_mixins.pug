@@ -25,3 +25,70 @@ mixin menuItem(text, icon = "", href = "#")
                             when "icon-medal"
                                 include ../icons/_icon-medal
                 span.menu-text=text
+
+mixin toggle()
+    .toggle
+        .toggle-spinner
+
+mixin btnPlay(icon = false, text = false) 
+    .button.button-primary.button--primary 
+        if icon 
+            include ../icons/_icon-play
+        if text
+            span= text 
+        else 
+            span Play
+
+mixin feedItem(name, rating = 4) 
+    .feed-item
+        .feed-item-header
+            .feed-author 
+                .feed-author-avatar
+                    img(src="./images/img-host-user.png", alt="")
+                    span.feed-author-verify    
+                        include ../icons/_icon-verify
+                .feed-author-content 
+                    .feed-author-header
+                        h4.feed-author-name= name
+                        .feed-author-rating
+                            span rated an episude 
+                            .feed-author-stars
+                                - for (var i = 0; i < rating; i++)
+                                    img(srcSet="./images/img-rating-star.png 2x", alt="rating-star")
+                    .feed-date Jun 25th
+            span.icon 
+                include ../icons/_icon-more
+        .feed-item-main
+            .feed-image
+                img(srcSet="./images/thumb1.png 2x", alt="thumbnail")
+            .feed-item-content 
+                .feed-item-share.icon
+                    include ../icons/_icon-share
+                p.feed-item-type Perspective Podcast (Ep. 1)
+                h3.feed-item-heading Philosophy vs Religion vs Science: Yahia Amin and Sadman Sadik
+                .feed-item-time 
+                    .feed-item-time-ago
+                        include ../icons/_icon-clock
+                        p 11 days ago
+                    .feed-item-time-long 
+                        include ../icons/_icon-sandClock
+                        p 
+                            span.feed-item-long-min 45 
+                            | mins 
+                            span.feed-item-long-sec 10 
+                            | secs
+                .feed-item-desc Play Philosophy vs Religion vs Science: Perspective Podcast (Ep. 1) | Yahia Amin and Sadman Sadik by PERSPECTIVE with Yahia Amin on desktop and mobile. Play over 265 million tracks for...
+        .feed-item-footer
+            .feed-item-footer-icons 
+                span.icon 
+                    include ../icons/_icon-heart
+                span.icon 
+                    include ../icons/_icon-star
+                span.icon 
+                    include ../icons/_icon-list
+            //- .feed-item-footer-button.button.button-primary.button--primary 
+            //-     include ../icons/_icon-play
+            //-     span.feed-item-footer-text Play Episode
+            +btnPlay(true, "Play Episode")
+
+

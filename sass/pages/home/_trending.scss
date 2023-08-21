@@ -1,6 +1,9 @@
 @use "../../abstracts" as abs;
 .trending {
     position: relative;
+    padding: 55px 0 36px;
+    container-type: inline-size;
+    container-name: trendingBlock;
     &-heading {
         --mb: 11px;
     }
@@ -10,6 +13,7 @@
         border-radius: 10px;
         display: flex;
         align-items: flex-start;
+        position: relative;
     }
     &-content {
         flex: 0 0 310px;
@@ -39,10 +43,31 @@
             color: abs.$natural;
         }
     }
+    &-vector,
+    &-frame {
+        position: absolute;
+    }
+    &-frame {
+        bottom: 0;
+        right: 35%;
+    }
+    &-vector {
+        right: 60px;
+        top: 48px;
+    }
+
     &-image {
         position: absolute;
         bottom: 0;
         right: 15px;
         max-width: 332px;
+    }
+    @container trendingBlock (max-width: 630px) {
+        &-image {
+            display: none;
+        }
+        &-content {
+            flex: 1;
+        }
     }
 }

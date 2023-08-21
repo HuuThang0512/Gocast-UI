@@ -32,8 +32,14 @@
     }
 }
 
-@mixin screenMW($value) {
+@mixin screenMinW($value) {
     @media screen and (min-width: $value) {
+        @content;
+    }
+}
+
+@mixin screenMaxW($value) {
+    @media screen and (max-width: $value) {
         @content;
     }
 }

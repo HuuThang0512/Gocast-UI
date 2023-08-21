@@ -4,7 +4,10 @@
     padding: 48px 30px;
     @include abs.bg(#fff);
     color: abs.$sidebar-text-color;
-    border-right: 1px solid abs.$block-border
+    border-right: 1px solid abs.$block-border;
+    @include abs.screenMaxW(1279.98px) {
+        display: none;
+    }
 }
 
 .logo {

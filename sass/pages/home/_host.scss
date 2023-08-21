@@ -19,7 +19,7 @@
         align-items: center;
         gap: 6px;
         margin: 4px;   
-        @include abs.screenMW(768px) {
+        @include abs.screenMinW(768px) {
             --avatar-size: 64px;
             gap: 6px;
         } 
