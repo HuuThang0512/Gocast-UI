@@ -30,14 +30,12 @@ mixin toggle()
     .toggle
         .toggle-spinner
 
-mixin btnPlay(icon = false, text = false) 
+mixin buttonPrimary(text = "", icon = false) 
     .button.button-primary.button--primary 
         if icon 
             include ../icons/_icon-play
         if text
             span= text 
-        else 
-            span Play
 
 mixin feedItem(name, rating = 4) 
     .feed-item
@@ -89,6 +87,46 @@ mixin feedItem(name, rating = 4)
             //- .feed-item-footer-button.button.button-primary.button--primary 
             //-     include ../icons/_icon-play
             //-     span.feed-item-footer-text Play Episode
-            +btnPlay(true, "Play Episode")
+            +buttonPrimary("Play Episode", true)
 
+mixin widget-header(title = "", url = "#") 
+    .widget-header 
+        h3.widget-heading.heading= title
+        if url 
+            a.widget-view-all(href= url) 
+                span.widget-view-all-text View all 
+                include ../icons/_icon-cheveron-right
 
+mixin followItem(name = "", username = "")
+    .follow-item
+        .follow-author 
+            .follow-author-avatar 
+                img(srcSet="./images/myAvatar.png 2x", alt="")
+            .follow-author-info 
+                h4.follow-author-name= name
+                p.follow-author-username= username
+        .follow-action
+            +buttonPrimary("Follow")
+
+mixin listenItem() 
+    .listen-item
+        .listen-image 
+            img(srcSet="./images/img-podcast-thumb.png 2x", alt="")
+        .listen-info    
+            p.listen-desc Perspective with Yahia Amin
+            h4.listen-title Don't Always Win | LifeSpring
+            .listen-meta 
+                .listen-meta-item
+                    include ../icons/_icon-play2
+                    span 156
+                .listen-meta-item
+                    .listen-meta-icon.icon
+                        include ../icons/_icon-heart
+                    span 78
+
+mixin topicItem()
+    .topic-item 
+        img.topic-image(srcSet="./images/img-topic-education.png 2x", alt="")
+        .topic-content 
+            h4.topic-title 🏫 Educations
+            p.topic-podcast 761k podcast

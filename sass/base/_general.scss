@@ -3,6 +3,7 @@
 .heading {
     --mb: 0;
     font-weight: 600;
+    font-size: 16px;
     line-height: 1.5;
     color: abs.$black1;
     margin-bottom: var(--mb);
@@ -10,6 +11,24 @@
 
 .icon {
     cursor: pointer;
+}
+
+.widget {
+    margin-bottom: 40px;
+    &-header {
+        display:flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 20px;
+    }
+    &-view-all {
+        display: flex;
+        align-items: center;
+        gap: 2px;
+        color: abs.$gray2;
+        font-size: 13px;
+        line-height: 1.38;
+    }
 }
 
 // @media screen and (min-width: 1440px) {

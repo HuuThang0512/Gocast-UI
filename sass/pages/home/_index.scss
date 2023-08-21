@@ -1,6 +1,11 @@
 @forward "./host";
 @forward "./trending";
 @forward "./feed";
+@forward "./top-podcast";
+@forward "./suggest";
+@forward "./history";
+@forward "./topics";
+@forward "./current-playing";
 
 .home-wrapper {
     display: grid;

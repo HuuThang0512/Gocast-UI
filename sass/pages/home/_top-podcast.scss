@@ -1,0 +1,18 @@
+.top-podcast {
+    &-images {
+        display: grid;
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+        grid-gap: 12px;
+        img {
+            border-radius: 10px;
+            aspect-ratio: 1;
+            object-fit: cover;
+            cursor: pointer;
+            transition: all 0.1s linear;
+            &:hover {
+                transform: translateY(-2px);
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 10px 0px;
+            }
+        }
+    }
+}

@@ -85,6 +85,7 @@ h1, h2, h3, h4, h5, h6 {
 .heading {
   --mb: 0;
   font-weight: 600;
+  font-size: 16px;
   line-height: 1.5;
   color: #1B1D21;
   margin-bottom: var(--mb);
@@ -94,11 +95,29 @@ h1, h2, h3, h4, h5, h6 {
   cursor: pointer;
 }
 
+.widget {
+  margin-bottom: 40px;
+}
+.widget-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.widget-view-all {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  color: #A6A7B2;
+  font-size: 13px;
+  line-height: 1.38;
+}
+
 .button {
   --gap: 8px;
   --fw: 600;
   background-color: #6C5DD3;
-  display: flex;
+  display: inline-flex;
   justify-content: center;
   align-items: center;
   padding: 8px 14px;
