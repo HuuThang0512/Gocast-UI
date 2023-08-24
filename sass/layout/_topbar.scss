@@ -39,8 +39,11 @@
     align-items: center;
     padding: 12px 20px;
     border-radius: 12px;
-    // background-color: abs.$natural2;
     background-color: var(--search-bg, abs.$natural2);
+    cursor: pointer;
+    label {
+        cursor: pointer;
+    }
 
     &-input {
         flex: 1;

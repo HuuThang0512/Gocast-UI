@@ -3,6 +3,9 @@ const $$ = document.querySelectorAll.bind(document)
 
 const toggles = $$(".toggle")
 const followBtns = $$(".follow-action .button")
+const toTopBtn = $(".button-toTop")
+const menuBtn = $(".nav-menu-icon")
+const sidebar = $(".sidebar")
 
 toggles.forEach((item) => {
     item.addEventListener("click", (e) => {
@@ -23,3 +26,13 @@ followBtns.forEach((item) => {
         }
     })
 })
+
+toTopBtn.addEventListener("click", () => {
+    window.scrollTo(0, 0)
+})
+
+menuBtn.addEventListener("click", () => {
+    sidebar.classList.toggle("active")
+    console.log(123123);
+})
+console.log(menuBtn);

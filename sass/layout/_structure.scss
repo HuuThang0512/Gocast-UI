@@ -17,16 +17,22 @@
       container-name: mainContainer;
 }
 
-.button-discover {
+.button-discover,
+.button-toTop {
       display: none;
       position: fixed;
       right: 24px;
-      bottom: 100px;
+      bottom: 160px;
       background: abs.$linear-active;
       border-radius: 100rem;
       padding: 8px;
       box-shadow: 0px 6px 24px 0px rgba(108, 93, 211, 0.40);
       z-index: 10;
+}
+
+.button-toTop {
+      bottom: 100px;
+      display: flex;
 }
 
 @include abs.screenMaxW(1279.98px) {

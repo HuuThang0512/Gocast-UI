@@ -48,6 +48,10 @@
             color: $gray;
         }
     }
+    .button {
+        position: relative;
+        z-index: 10;
+    }
     &-vector,
     &-frame {
         position: absolute;

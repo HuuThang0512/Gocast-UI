@@ -1,10 +1,11 @@
 .topbar 
-    a.topbar-logo(href="/") 
+    a.topbar-logo(href="https://www.facebook.com/huuthang.thaipham.9/", target="blank", rel="noopener") 
         //- img(srcSet="./images/logo.png 2x", alt="GocastUI")
         include ../icons/_icon-logo
     .search 
-        img.search-icon(src="./images/icons/icon-search.svg", alt="icon-search")
-        input.search-input(type="text" placeholder="Search 2+ million podcasts and listeners")
+        label(for="topbar-search")
+            img.search-icon(src="./images/icons/icon-search.svg", alt="icon-search")
+        input.search-input#topbar-search(type="text" placeholder="Search 2+ million podcasts and listeners")
     .topbar-right
         //- button.button.button--primary.btn-upload.button-primary
         .topbar-upload.upload
