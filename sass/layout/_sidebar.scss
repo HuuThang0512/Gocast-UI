@@ -2,9 +2,9 @@
 
 .sidebar {
     padding: 48px 30px;
-    @include abs.bg(#fff);
+    background-color: var(--body-bg-color, #fff);
     color: abs.$sidebar-text-color;
-    border-right: 1px solid abs.$block-border;
+    border-right: 1px solid var(--block-border-color, abs.$block-border);
     @include abs.screenMaxW(1279.98px) {
         position: fixed;
         top: 0;
@@ -22,6 +22,7 @@
     display: block;
     margin-bottom: 44px; 
     padding: 0 20px;
+    color: var(--logo, #11142D);
 }
 
 .menu {
@@ -29,13 +30,13 @@
     display: flex;
     flex-direction: column;
     gap: 6px;
-    color: abs.$sidebar-text-color;
-
+    // color: abs.$sidebar-text-color;
+    color: var(--menu-color, abs.$sidebar-text-color);
     &:not(:last-child):after {
         content: "";
         display: block;
         height: 1px;
-        background-color: abs.$sidebar-menu-border;
+        background-color: var(--sidebar-line, abs.$sidebar-menu-border);
         margin-block: $gap;
     }
 
@@ -55,13 +56,18 @@
         align-items: center;
         gap: 10px;
         font-weight: 500;
-        color: abs.$sidebar-text-color;
+        color: var(--menu-color, abs.$sidebar-text-color);
         font-size: 14px;
         line-height: 143%;
         text-transform: capitalize;
         z-index: 0;
         transition: all 0.2s linear;
-
+        [fill^="#E5"] {
+            fill: var(--icon-path-gray, #E5EAF1);
+        }
+        [fill^="#A5"] {
+            fill: var(--icon-color, #A5B4CB);
+        }
         &::after {
             content: "";
             border-radius: inherit;

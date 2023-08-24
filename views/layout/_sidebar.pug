@@ -1,7 +1,8 @@
 
 aside.sidebar 
       a.logo(href="/") 
-            img(srcSet="./images/logo.png 2x", alt="GocastUI")
+            //- img(srcSet="./images/logo.png 2x", alt="GocastUI")
+            include ../icons/_icon-logo
       ul.menu
             each item in [{text: "Home", icon: "icon-home", href: "/index.html"}, {text: "Trending", icon: "icon-trending", href: "/trending.html"}, {text: "Explore Topics", icon: "icon-topic", href: "/explore-topics.html"}, {text: "Playlist", icon: "icon-playlist", href: "/playlist.html"}, {text: "Subscriptions", icon: "icon-subcrtion", href: "/subscriptions.html"}]
                   +menuItem(item.text, item.icon, item.href)

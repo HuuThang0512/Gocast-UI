@@ -2,12 +2,13 @@
 
 .topbar {
     padding: 24px 56px;
-    background-color: #fff;
+    background-color: var(--body-bg-color, #fff);
     display:flex;
     justify-content: space-between;
     align-items: center;
     &-logo {
         flex-shrink: 0;
+        color: var(--logo, #11142D);
     }
     &-right {
         display: flex;
@@ -38,7 +39,8 @@
     align-items: center;
     padding: 12px 20px;
     border-radius: 12px;
-    background-color: abs.$natural2;
+    // background-color: abs.$natural2;
+    background-color: var(--search-bg, abs.$natural2);
 
     &-input {
         flex: 1;

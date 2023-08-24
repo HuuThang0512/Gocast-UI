@@ -45,6 +45,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   line-height: 1;
+  background-color: var(--body-bg-color, #fff);
 }
 
 a {
@@ -58,7 +59,7 @@ ul, ol {
 body {
   font-family: "IBM Plex Sans", sans-serif;
   font-size: 15px;
-  color: #1c1e22;
+  color: var(--global-text, #1c1e22);
   font-weight: 400;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -74,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
   font-size: 16px;
   line-height: 1.5;
-  color: #1B1D21;
+  color: var(--heading-color, #1B1D21);
   margin-bottom: var(--mb);
 }
 
@@ -98,6 +99,41 @@ h1, h2, h3, h4, h5, h6 {
   color: #A6A7B2;
   font-size: 13px;
   line-height: 1.38;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --logo: #fff;
+    --body-bg-color: #242731;
+    --block-border-color: #373A43;
+    --search-bg: #373A43;
+    --menu-color: #ABABAD;
+    --heading-color: #fff;
+    --global-text: white;
+    --banner-bg: #050F16;
+    --host-name: abs.$natural4;
+    --trending-txt-gray2: #A6A7B2;
+    --trending-author: #fff;
+    --toggle-text: #fff;
+    --icon-path-gray: #676A6F;
+    --icon-color: #A5B4CB;
+  }
+}
+html.dark {
+  --logo: #fff;
+  --body-bg-color: #242731;
+  --block-border-color: #373A43;
+  --search-bg: #373A43;
+  --menu-color: #ABABAD;
+  --heading-color: #fff;
+  --global-text: white;
+  --banner-bg: #050F16;
+  --host-name: abs.$natural4;
+  --trending-txt-gray2: #A6A7B2;
+  --trending-author: #fff;
+  --toggle-text: #fff;
+  --icon-path-gray: #676A6F;
+  --icon-color: #A5B4CB;
 }
 
 .button {
@@ -177,13 +213,14 @@ h1, h2, h3, h4, h5, h6 {
 
 .topbar {
   padding: 24px 56px;
-  background-color: #fff;
+  background-color: var(--body-bg-color, #fff);
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .topbar-logo {
   flex-shrink: 0;
+  color: var(--logo, #11142D);
 }
 .topbar-right {
   display: flex;
@@ -213,7 +250,7 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   padding: 12px 20px;
   border-radius: 12px;
-  background-color: #F0F3F6;
+  background-color: var(--search-bg, #F0F3F6);
 }
 .search-input {
   flex: 1;
@@ -258,9 +295,9 @@ h1, h2, h3, h4, h5, h6 {
 }
 .sidebar {
   padding: 48px 30px;
-  background-color: #fff;
+  background-color: var(--body-bg-color, #fff);
   color: hsl(215, 19%, 59%);
-  border-right: 1px solid #F0F3F6;
+  border-right: 1px solid var(--block-border-color, #F0F3F6);
 }
 @media screen and (max-width: 1279.98px) {
   .sidebar {
@@ -280,19 +317,20 @@ h1, h2, h3, h4, h5, h6 {
   display: block;
   margin-bottom: 44px;
   padding: 0 20px;
+  color: var(--logo, #11142D);
 }
 
 .menu {
   display: flex;
   flex-direction: column;
   gap: 6px;
-  color: hsl(215, 19%, 59%);
+  color: var(--menu-color, hsl(215, 19%, 59%));
 }
 .menu:not(:last-child):after {
   content: "";
   display: block;
   height: 1px;
-  background-color: #E9EEF4;
+  background-color: var(--sidebar-line, #E9EEF4);
   margin-block: 26px;
 }
 .menu-title {
@@ -310,12 +348,18 @@ h1, h2, h3, h4, h5, h6 {
   align-items: center;
   gap: 10px;
   font-weight: 500;
-  color: hsl(215, 19%, 59%);
+  color: var(--menu-color, hsl(215, 19%, 59%));
   font-size: 14px;
   line-height: 143%;
   text-transform: capitalize;
   z-index: 0;
   transition: all 0.2s linear;
+}
+.menu-link [fill^="#E5"] {
+  fill: var(--icon-path-gray, #E5EAF1);
+}
+.menu-link [fill^="#A5"] {
+  fill: var(--icon-color, #A5B4CB);
 }
 .menu-link::after {
   content: "";
@@ -350,7 +394,7 @@ h1, h2, h3, h4, h5, h6 {
   max-width: 1440px;
   min-height: 100vh;
   margin: 0 auto;
-  background-color: hsl(0, 100%, 100%);
+  background-color: var(--body-bg-color, #fff);
   display: grid;
   grid-template-columns: 256px minmax(0, 1fr);
 }
@@ -390,13 +434,13 @@ h1, h2, h3, h4, h5, h6 {
   justify-content: space-between;
   align-items: center;
   padding: 14px 24px;
-  border-top: 1px solid #E4E4E4;
+  border-top: 1px solid var(--block-border-color, #E4E4E4);
   position: fixed;
   bottom: 0;
   left: 0;
   right: 0;
   z-index: 10;
-  background-color: var(--body-bg);
+  background-color: var(--body-bg-color, #fff);
 }
 .navigation-upload {
   display: flex;

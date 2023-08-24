@@ -2,7 +2,8 @@
 body {
       font-family: abs.$font-primary;
       font-size: 15px;
-      color: abs.$text-black1;
+      // color: abs.$text-black1;
+      color: var(--global-text, abs.$text-black1);
       font-weight: 400;
       text-rendering: optimizeLegibility;
       -webkit-font-smoothing: antialiased;

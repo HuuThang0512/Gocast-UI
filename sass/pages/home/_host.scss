@@ -50,12 +50,13 @@
         border-radius: 100rem;
         overflow: hidden;
         background-color: var(--color);
-        box-shadow: 0 0 0 2px #fff, 0 0 0 3px #FFABC6;
+        box-shadow: 0 0 0 2px var(--body-bg-color, #fff), 0 0 0 3px #FFABC6;
     }
 
     &-name {
         font-size: 14px;
-        color: abs.$gray1;
+        // color: abs.$gray1;
+        color: var(--host-name, abs.$gray1);
         user-select: none;
     }
     @include abs.screenMaxW(767px) {

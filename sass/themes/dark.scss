@@ -1,0 +1,45 @@
+@use "../abstracts" as abs;
+
+:root {
+
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --logo: #fff;
+    --body-bg-color: #242731;
+    // --sidebar-line: #373A43;
+    --block-border-color: #373A43;
+    --search-bg: #373A43;
+    --menu-color: #ABABAD;
+    --heading-color: #fff;
+    --global-text: white;
+    --banner-bg: #050F16;
+    --host-name: abs.$natural4;
+    --trending-txt-gray2: #A6A7B2;
+    --trending-author: #fff;
+    --toggle-text: #fff;
+    // --feed-border: #373A43;
+    --icon-path-gray: #676A6F;
+    --icon-color: #A5B4CB;
+  }
+}
+
+html.dark {
+    --logo: #fff;
+    --body-bg-color: #242731;
+    // --sidebar-line: #373A43;
+    --block-border-color: #373A43;
+    --search-bg: #373A43;
+    --menu-color: #ABABAD;
+    --heading-color: #fff;
+    --global-text: white;
+    --banner-bg: #050F16;
+    --host-name: abs.$natural4;
+    --trending-txt-gray2: #A6A7B2;
+    --trending-author: #fff;
+    --toggle-text: #fff;
+    // --feed-border: #373A43;
+    --icon-path-gray: #676A6F;
+    --icon-color: #A5B4CB;
+}

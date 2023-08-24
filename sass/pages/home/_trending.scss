@@ -1,5 +1,6 @@
 @use "../../abstracts" as abs;
 .trending {
+    $gray: var(--trending-txt-gray2, abs.$natural);
     position: relative;
     padding: 55px 0 36px;
     container-type: inline-size;
@@ -9,7 +10,8 @@
     }
     &-banner {
         padding: 20px;
-        background-color: abs.$natural1;
+        // background-color: abs.$natural1;
+        background-color: var(--banner-bg, abs.$natural1);
         border-radius: 10px;
         display: flex;
         align-items: flex-start;
@@ -30,17 +32,20 @@
     }
     &-podcast {
         font-size: 14px;
-        color: abs.$natural;
+        // color: abs.$natural;
+        color: $gray;
         line-height: 1.42;
         margin-bottom: 4px;
     }
     &-author {
         font-size: 14px;
-        color: abs.$black90;
+        // color: abs.$black90;
+        color: var(--trending-author, abs.$black90);
         line-height: 1.42;
         margin-bottom: 20px;
         & span {
-            color: abs.$natural;
+            // color: abs.$natural;
+            color: $gray;
         }
     }
     &-vector,
@@ -49,11 +54,11 @@
     }
     &-frame {
         bottom: 0;
-        right: 35%;
+        right: 34%;
     }
     &-vector {
-        right: 60px;
-        top: 48px;
+        right: 28px;
+        top: 56px;
     }
     @include abs.screenMaxW(767px) {
         padding: 35px 0 25px;

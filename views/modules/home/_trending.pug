@@ -12,7 +12,11 @@
             button.button.button-primary.button--primary 
                 include ../../icons/_icon-play
                 span Play now
-        img.trending-frame(srcSet="./images/frame.png 2x", alt="frame")
-        img.trending-vector(srcSet="./images/vector.png 2x", alt="vector")
+        .trending-vector 
+            include ../../icons/_icon-vector
+        .trending-frame 
+            include ../../icons/_icon-frame
+        //- img.trending-frame(srcSet="./images/frame.png 2x", alt="frame")
+        //- img.trending-vector(srcSet="./images/vector.png 2x", alt="vector")
         .trending-image
             img(srcSet="./images/img-trending-man.png 2x", alt="trending-man")

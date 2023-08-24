@@ -5,7 +5,8 @@
     font-weight: 600;
     font-size: 16px;
     line-height: 1.5;
-    color: abs.$black1;
+    // color: abs.$black1;
+    color: var(--heading-color, abs.$black1);
     margin-bottom: var(--mb);
 }
 

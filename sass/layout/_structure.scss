@@ -5,7 +5,8 @@
       max-width: 1440px;
       min-height: 100vh;
       margin: 0 auto;
-      background-color: abs.$bg-color;
+      // background-color: abs.$bg-color;
+      background-color: var(--body-bg-color, #fff);
       display: grid;
       grid-template-columns: 256px minmax(0, 1fr);
 }

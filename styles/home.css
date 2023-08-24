@@ -44,11 +44,11 @@
   border-radius: 100rem;
   overflow: hidden;
   background-color: var(--color);
-  box-shadow: 0 0 0 2px #fff, 0 0 0 3px #FFABC6;
+  box-shadow: 0 0 0 2px var(--body-bg-color, #fff), 0 0 0 3px #FFABC6;
 }
 .host-name {
   font-size: 14px;
-  color: #5F6164;
+  color: var(--host-name, #5F6164);
   user-select: none;
 }
 @media screen and (max-width: 767px) {
@@ -91,7 +91,7 @@
 }
 .trending-banner {
   padding: 20px;
-  background-color: #F8F8F8;
+  background-color: var(--banner-bg, #F8F8F8);
   border-radius: 10px;
   display: flex;
   align-items: flex-start;
@@ -114,29 +114,29 @@
 }
 .trending-podcast {
   font-size: 14px;
-  color: #676A6F;
+  color: var(--trending-txt-gray2, #676A6F);
   line-height: 1.42;
   margin-bottom: 4px;
 }
 .trending-author {
   font-size: 14px;
-  color: #232333;
+  color: var(--trending-author, #232333);
   line-height: 1.42;
   margin-bottom: 20px;
 }
 .trending-author span {
-  color: #676A6F;
+  color: var(--trending-txt-gray2, #676A6F);
 }
 .trending-vector, .trending-frame {
   position: absolute;
 }
 .trending-frame {
   bottom: 0;
-  right: 35%;
+  right: 34%;
 }
 .trending-vector {
-  right: 60px;
-  top: 48px;
+  right: 28px;
+  top: 56px;
 }
 @media screen and (max-width: 767px) {
   .trending {
@@ -196,7 +196,7 @@
 }
 .feed-toggle-text {
   font-size: 14px;
-  color: #5F6164;
+  color: --toggle-text, #5F6164;
   font-weight: 500;
 }
 @container feedHeader (max-width: 470px) {
@@ -205,7 +205,7 @@
   }
 }
 .feed-item {
-  border: 1px solid #F0F3F6;
+  border: 1px solid var(--block-border-color, #F0F3F6);
   margin-bottom: 30px;
   border-radius: 10px;
 }
@@ -218,8 +218,8 @@
   align-items: center;
 }
 .feed-item-main {
-  border-top: 1px solid #F0F3F6;
-  border-bottom: 1px solid #F0F3F6;
+  border-top: 1px solid var(--block-border-color, #F0F3F6);
+  border-bottom: 1px solid var(--block-border-color, #F0F3F6);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -237,7 +237,6 @@
   line-height: 1.42;
 }
 .feed-item-heading {
-  color: #1B1D21;
   line-height: 1.42;
   font-weight: 500;
   font-size: 14px;
@@ -259,7 +258,6 @@
 }
 .feed-item-desc {
   font-size: 13px;
-  color: #1B1D21;
   line-height: 1.46;
   margin-top: 16px;
   display: -webkit-box;
@@ -341,6 +339,7 @@
   margin-top: 2px;
   margin-bottom: 4px;
   gap: 4px;
+  line-height: 1.42;
 }
 .feed-image {
   flex: 0 0 152px;
@@ -418,7 +417,7 @@
   flex: 0 0 46px;
   aspect-ratio: 1;
   border-radius: 8px;
-  box-shadow: 0 0 0 2px white, 0 0 0 3px #FFC7D9;
+  box-shadow: 0 0 0 2px var(--body-bg-color, #fff), 0 0 0 3px #FFC7D9;
 }
 .follow-author-avatar img {
   width: 100%;
