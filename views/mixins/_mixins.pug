@@ -130,3 +130,11 @@ mixin topicItem()
         .topic-content 
             h4.topic-title 🏫 Educations
             p.topic-podcast 761k podcast
+        
+mixin uploadBtn(idBtn = "", classBtn = "", text = "")
+    .upload(class= classBtn)
+        label(for= idBtn).button
+            img.btn-upload-icon(src="./images/icons/icon-upload.svg", alt="")   
+            if text        
+                span.btn-upload-text= text
+        input(type="file", name="", id= idBtn).upload-input

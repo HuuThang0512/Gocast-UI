@@ -40,26 +40,3 @@ a {
 ul, ol {
   list-style-type: none;
 }
-
-.action-icon {
-  position: relative;
-  &::after {
-    content: "";
-    flex-shrink: 0;
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    background-color: abs.$News;
-    border: 2px solid #fff;
-    border-radius: 100rem;
-    top: 0;
-    right: 0;
-    transform: translate(25%, -25%);
-    display: none;
-  }
-  &.new {
-    &::after {
-      display: block;
-    }
-  }
-}

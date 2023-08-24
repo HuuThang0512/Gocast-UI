@@ -55,7 +55,6 @@
         border: 1px solid abs.$natural2;
         margin-bottom: 30px;
         border-radius: 10px;
-        // border: 1px solid red;
         & > * {
             padding: 20px;
         }
@@ -75,8 +74,10 @@
         }
         &-share {
             position: absolute;
-            top: 32px;
-            right: 32px;
+            // top: 32px;
+            // right: 32px;
+            top: 6%;
+            right: 6%;
         }
         &-type {
             font-size: 14px;
@@ -134,10 +135,22 @@
             //     // padding: 6px 12px;
             //     align-self: stretch;
             // }
-            .button.button-primary {
+            .button {
                 --fw: 500;
                 font-size: 14px;
                 align-self: stretch;
+            }
+        }
+        @container mainContainer (max-width: 420px) {
+            & > * {
+                padding: 12px;
+            }
+            .button {
+                font-size: 13px;
+                svg {
+                    width: 20px;
+                    height: 20px;
+                }
             }
         }
     }
@@ -214,9 +227,6 @@
             }
             &-footer {
                 flex-direction: row;
-                &-button {
-                    // font-size: 14px;
-                }
             }
         }
         &-author {

@@ -12,11 +12,19 @@ $gray2: #A6A7B2;
 $natural: #676A6F;
 $natural1: #F8F8F8;
 $natural2: #F0F3F6;
+$natural4: #E4E4E4;
 $neutral1: #FCFCFC;
+$icon-color: #A5B4CB;
 $scPrimary40: #FFC7D9;
 $linear-active: linear-gradient(142deg, #415EF4 0%, #7141EF 100%);
 $block-border: #F0F3F6;
 $sidebar-menu-border: #E9EEF4;
 $News: #FF754C;
 :root {
+    --body-bg: #fff;
+    --primary-h: 248;
+    --primary-s: 57%;
+    --primary-l: 60%;
+    --primary-color: #6C5DD3;
+
 }

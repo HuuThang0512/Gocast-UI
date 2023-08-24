@@ -1,0 +1,25 @@
+@use "../abstracts" as abs;
+
+.action-icon {
+    position: relative;
+    display: inline-block;
+    &::after {
+      content: "";
+      flex-shrink: 0;
+      position: absolute;
+      width: 14px;
+      height: 14px;
+      background-color: abs.$News;
+      border: 2px solid #fff;
+      border-radius: 100rem;
+      top: -2%;
+      right: -2%;
+      transform: translate(25%, -25%);
+      display: none;
+    }
+    &.new {
+      &::after {
+        display: block;
+      }
+    }
+}

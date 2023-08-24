@@ -12,15 +12,34 @@
 
 .main-container {
       padding: 37px 56px;
+      container-type: inline-size;
+      container-name: mainContainer;
+}
+
+.button-discover {
+      display: none;
+      position: fixed;
+      right: 24px;
+      bottom: 100px;
+      background: abs.$linear-active;
+      border-radius: 100rem;
+      padding: 8px;
+      box-shadow: 0px 6px 24px 0px rgba(108, 93, 211, 0.40);
+      z-index: 10;
 }
 
 @include abs.screenMaxW(1279.98px) {
       .wrapper {
             grid-template-columns: 1fr;
+            padding-bottom: 80px;
       }
 
       .main-container {
-            padding: 24px;
+            padding: 0 24px;
       }  
+
+      .button-discover {
+            display: flex;
+      }
 }
 

@@ -6,7 +6,9 @@
     display:flex;
     justify-content: space-between;
     align-items: center;
-
+    &-logo {
+        flex-shrink: 0;
+    }
     &-right {
         display: flex;
         align-items: center;
@@ -57,7 +59,24 @@
 }
 
 .upload {
-    &-input {
+    input {
+        display: none;
+    }
+}
+
+@include abs.screenMinW(1280px) {
+    .topbar-logo {
+      display: none;
+    }
+}
+
+@include abs.screenMaxW(1279.98px) {
+    .topbar {
+        padding: 20px 24px;
+    }
+    .topbar-upload,
+    .search,
+    .topbar-right-action {
         display: none;
     }
 }

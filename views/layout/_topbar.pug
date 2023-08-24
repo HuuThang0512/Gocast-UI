@@ -1,10 +1,12 @@
 .topbar 
+    a.topbar-logo(href="/") 
+        img(srcSet="./images/logo.png 2x", alt="GocastUI")
     .search 
         img.search-icon(src="./images/icons/icon-search.svg", alt="icon-search")
         input.search-input(type="text" placeholder="Search 2+ million podcasts and listeners")
     .topbar-right
         //- button.button.button--primary.btn-upload.button-primary
-        .upload
+        .topbar-upload.upload
             label(for="upload-file").button.button--primary.btn-upload.button-primary
                 img.btn-upload-icon(src="./images/icons/icon-upload.svg", alt="upload-icon")
                 span.btn-upload-text Upload
