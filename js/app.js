@@ -12,6 +12,7 @@ let feedTabActive = $(".feed-tab-item.active")
 const feedTabLine = $(".feed-tab-line")
 const sidebarClose = $(".sidebar-close")
 const themeBtn = $(".button-dark-mode")
+const iconHearts = $$(".icon-heart")
 
 function changeLineTab() {
     let feedTabActive = $(".feed-tab-item.active")
@@ -94,4 +95,11 @@ feedTabs.forEach((tab) => {
 themeBtn.addEventListener("click", (e) => {
     $("html").classList.toggle("dark")
     // console.log(isDarkMode);
+})
+
+// Click Heart
+iconHearts.forEach((heart) => {
+    heart.addEventListener("click", (e) => {
+        // heartClickIcon = heart.
+    })
 })

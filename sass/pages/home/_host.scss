@@ -72,16 +72,16 @@
             grid-auto-columns: 55px;
             grid-auto-flow: column;
             overflow-x: auto;
-            overflow-y: hidden;
+            overflow-y: auto;
             scroll-snap-type: x mandatory;
             scroll-snap-stop: always;
             padding: 10px 0;
             &::-webkit-scrollbar {
-              display: none;
-              width: 0;
+                display: none;
+                width: 0px;
             }
             & > *{
-              scroll-snap-align: start;
+                scroll-snap-align: start;
             }
         }
     }
