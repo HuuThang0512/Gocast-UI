@@ -5,25 +5,40 @@
     background-color: var(--body-bg-color, #fff);
     color: abs.$sidebar-text-color;
     border-right: 1px solid var(--block-border-color, abs.$block-border);
-    transition: all 0.2s linear;
+    transition: all 0.15s linear;
     z-index: 10;
     overflow-y: auto;
     &::-webkit-scrollbar {
         display: none;
         width: 0px;
     }
+    &-top {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 44px;
+    }
     .overlay {
-        position: relative;
-        min-height: 100vh;
-        min-width: 100vw;
-        background-color: black;
+        position: fixed;
+        inset: 0;
+        width: 100vw;
+        background-color: rgba(43, 57, 255, 0.4);
         display: none;
-        // z-index: -1
+        z-index: 1
+    }
+    &-close {
+        display: none;
+        width: 24px;
+        height: 24px;
+        cursor: pointer;
     }
     &.active {
         transform: translateX(0);
     }
     @include abs.screenMaxW(1279.98px) {
+        .menu:last-child {
+            margin-bottom: 80px;
+        }
         position: fixed;
         top: 0;
         left: 0;
@@ -33,12 +48,15 @@
         z-index: 9;
         transition: all 0.25s linear;
         transform: translateX(-100%);
+        &-close {
+            display: flex;
+        }
     }
 }
 
 .logo {
-    display: block;
-    margin-bottom: 44px; 
+    display: inline-block;
+    // margin-bottom: 44px; 
     padding: 0 20px;
     color: var(--logo, #11142D);
 }

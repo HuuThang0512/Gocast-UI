@@ -1,9 +1,11 @@
 
 aside.sidebar 
       .overlay
-      a.logo(href="https://www.facebook.com/huuthang.thaipham.9/", target="blank", rel="noopener") 
-            //- img(srcSet="./images/logo.png 2x", alt="GocastUI")
-            include ../icons/_icon-logo
+      .sidebar-top 
+            a.logo(href="https://www.facebook.com/huuthang.thaipham.9/", target="blank", rel="noopener") 
+                  include ../icons/_icon-logo
+            .sidebar-close 
+                  include ../icons/_icon-close   
       ul.menu
             each item in [{text: "Home", icon: "icon-home", href: "/index.html"}, {text: "Trending", icon: "icon-trending", href: "/trending.html"}, {text: "Explore Topics", icon: "icon-topic", href: "/explore-topics.html"}, {text: "Playlist", icon: "icon-playlist", href: "/playlist.html"}, {text: "Subscriptions", icon: "icon-subcrtion", href: "/subscriptions.html"}]
                   +menuItem(item.text, item.icon, item.href)

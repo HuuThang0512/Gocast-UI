@@ -18,19 +18,46 @@
 }
 
 .button-discover,
-.button-toTop {
+.button-toTop,
+.button-dark-mode {
       display: none;
       position: fixed;
       right: 24px;
       bottom: 160px;
       background: abs.$linear-active;
+      box-shadow: 0px 6px 24px 0px rgba(108, 93, 211, 0.40);
       border-radius: 100rem;
       padding: 8px;
-      box-shadow: 0px 6px 24px 0px rgba(108, 93, 211, 0.40);
       z-index: 10;
 }
 
+.button-discover {
+      bottom: 220px;
+}
+
+.button-dark-mode {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: fixed;
+      width: 40px;
+      height: 40px;
+      bottom: 160px;
+      background: abs.$linear-active;
+      box-shadow: 0px 6px 24px 0px rgba(108, 93, 211, 0.40);
+      border-radius: 100rem;
+      color: var(--theme-button-color, #000);
+      icon {
+            width: 24px;
+            height: 24px;
+      }
+}
+
+// html.dark
+
 .button-toTop {
+      width: 40px;
+      height: 40px;
       bottom: 100px;
       display: flex;
 }

@@ -6,24 +6,6 @@
   --primary-color: #6C5DD3;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --logo: #fff;
-    --body-bg-color: #242731;
-    --block-border-color: #373A43;
-    --search-bg: #373A43;
-    --menu-color: #ABABAD;
-    --heading-color: #fff;
-    --global-text: white;
-    --banner-bg: #050F16;
-    --host-name: abs.$natural4;
-    --trending-txt-gray2: #A6A7B2;
-    --trending-author: #fff;
-    --toggle-text: #fff;
-    --icon-path-gray: #676A6F;
-    --icon-color: #A5B4CB;
-  }
-}
 html.dark {
   --logo: #fff;
   --body-bg-color: #242731;
@@ -39,6 +21,7 @@ html.dark {
   --toggle-text: #fff;
   --icon-path-gray: #676A6F;
   --icon-color: #A5B4CB;
+  --theme-button-color: #fff;
 }
 
 /*# sourceMappingURL=dark.css.map */

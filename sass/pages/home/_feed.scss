@@ -17,6 +17,7 @@
     &-tab {
         display: flex;
         white-space: normal;
+        position: relative;
         &-item {
             cursor: pointer;
             font-weight: 500;
@@ -27,9 +28,18 @@
             border-bottom: 1px solid abs.$bg3;
             &.active {
                 color: abs.$primary-color;
-                border-color: currentColor;
+                // border-color: currentColor;
                 font-weight: 600;
             }
+        }
+        &-line {
+            width: 100px;
+            height: 1px;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: abs.$primary-color;
+            transition: all 0.15s linear;
         }
     }
 

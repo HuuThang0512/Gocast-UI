@@ -3,6 +3,7 @@
         .feed-tab
             each tab, index in ["My Feed", "Popular Feed", "Recent"]
                 .feed-tab-item(class= `${index == 0 ? "active" : ""}`)=tab
+            .feed-tab-line
         .feed-toggle 
             +toggle
             p.feed-toggle-text New Releases &amp; Guests Only
