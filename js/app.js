@@ -5,6 +5,7 @@ const toggles = $$(".toggle")
 const followBtns = $$(".follow-action .button")
 const toTopBtn = $(".button-toTop")
 const menuBtn = $(".nav-menu-icon")
+const sidebarBlock = $(".sidebar-block")
 const sidebar = $(".sidebar")
 const feedTabs = $$(".feed-tab-item")
 let feedTabActive = $(".feed-tab-item.active")
@@ -62,17 +63,20 @@ toTopBtn.addEventListener("click", () => {
 
 // Click show/hide sidebar
 menuBtn.addEventListener("click", () => {
-    sidebar.classList.toggle("active")
+    // sidebar.classList.toggle("active")
+    sidebarBlock.classList.toggle("active")
 })
 sidebarClose.addEventListener("click", () => {
-    sidebar.classList.remove("active")
+    // sidebar.classList.toggle("active")
+    sidebarBlock.classList.remove("active")
 })
 
 document.addEventListener("click", (e) => {
-    const sidebarClick = e.target.closest(".sidebar")
-    const menuClick = e.target.closest(".nav-menu-iconP")
-    if (!sidebarClick && !menuClick && sidebar.classList.contains("active")) {
-        sidebar.classList.remove("active")
+    let sidebarClick = e.target.closest(".sidebar")
+    let menuClick = e.target.closest(".nav-menu-icon")
+    if (!sidebarClick && !menuClick && sidebarBlock.classList.contains("active")) {
+        // sidebar.classList.remove("active")
+        sidebarBlock.classList.remove("active")
     }
 })
 

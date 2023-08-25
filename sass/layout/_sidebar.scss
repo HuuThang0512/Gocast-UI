@@ -8,6 +8,17 @@
     transition: all 0.15s linear;
     z-index: 10;
     overflow-y: auto;
+    &-block {
+        &.active {
+            .sidebar {
+                transform: translateX(0);
+            }
+            .sidebar-overlay {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
+    }
     &::-webkit-scrollbar {
         display: none;
         width: 0px;
@@ -18,23 +29,28 @@
         justify-content: space-between;
         margin-bottom: 44px;
     }
-    .overlay {
+    &-overlay {
         position: fixed;
         inset: 0;
         width: 100vw;
-        background-color: rgba(43, 57, 255, 0.4);
-        display: none;
-        z-index: 1
+        background-color: rgba(0, 0, 0, 0.6);
+        visibility: hidden;
+        opacity: 0;
+        z-index: 1;
+        transition: all 0.15s linear;
     }
     &-close {
         display: none;
-        width: 24px;
-        height: 24px;
         cursor: pointer;
     }
-    &.active {
-        transform: translateX(0);
-    }
+    // &.active {
+    //     transform: translateX(0);
+    // }
+
+    // &.active .sidebar-overlay {
+    //     display: block;
+    // }
+
     @include abs.screenMaxW(1279.98px) {
         .menu:last-child {
             margin-bottom: 80px;

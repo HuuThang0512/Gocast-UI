@@ -291,6 +291,13 @@ html.dark {
   z-index: 10;
   overflow-y: auto;
 }
+.sidebar-block.active .sidebar {
+  transform: translateX(0);
+}
+.sidebar-block.active .sidebar-overlay {
+  visibility: visible;
+  opacity: 1;
+}
 .sidebar::-webkit-scrollbar {
   display: none;
   width: 0px;
@@ -301,22 +308,19 @@ html.dark {
   justify-content: space-between;
   margin-bottom: 44px;
 }
-.sidebar .overlay {
+.sidebar-overlay {
   position: fixed;
   inset: 0;
   width: 100vw;
-  background-color: rgba(43, 57, 255, 0.4);
-  display: none;
+  background-color: rgba(0, 0, 0, 0.6);
+  visibility: hidden;
+  opacity: 0;
   z-index: 1;
+  transition: all 0.15s linear;
 }
 .sidebar-close {
   display: none;
-  width: 24px;
-  height: 24px;
   cursor: pointer;
-}
-.sidebar.active {
-  transform: translateX(0);
 }
 @media screen and (max-width: 1279.98px) {
   .sidebar {
