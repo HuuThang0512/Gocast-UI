@@ -313,10 +313,10 @@ html.dark {
   z-index: 10;
   overflow-y: auto;
 }
-.sidebar-block.active .sidebar {
+.sidebar.active {
   transform: translateX(0);
 }
-.sidebar-block.active .sidebar-overlay {
+.sidebar.active ~ .sidebar-overlay {
   visibility: visible;
   opacity: 1;
 }

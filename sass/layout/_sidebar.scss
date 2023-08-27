@@ -8,15 +8,23 @@
     transition: all 0.15s linear;
     z-index: 10;
     overflow-y: auto;
-    &-block {
-        &.active {
-            .sidebar {
-                transform: translateX(0);
-            }
-            .sidebar-overlay {
-                visibility: visible;
-                opacity: 1;
-            }
+    // &-block {
+    //     position: relative;
+    //     z-index: 10;
+    //     &.active {
+    //         .sidebar {
+    //             transform: translateX(0);
+    //         }
+    //         .sidebar-overlay {
+    //             visibility: visible;
+    //             opacity: 1;
+    //         }
+    //     }
+    &.active {
+        transform: translateX(0);
+        ~ .sidebar-overlay {
+            visibility: visible;
+            opacity: 1;
         }
     }
     &::-webkit-scrollbar {

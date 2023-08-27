@@ -1,21 +1,20 @@
-.sidebar-block
-      .overlay.sidebar-overlay
-      aside.sidebar 
-            .overlay
-            .sidebar-top 
-                  a.logo(href="https://www.facebook.com/huuthang.thaipham.9/", target="blank", rel="noopener") 
-                        include ../icons/_icon-logo
-                  .sidebar-close 
-                        include ../icons/_icon-close   
-            ul.menu
-                  each item in [{text: "Home", icon: "icon-home", href: "./index.html"}, {text: "Trending", icon: "icon-trending", href: "./trending.html"}, {text: "Explore Topics", icon: "icon-topic", href: "./explore-topics.html"}, {text: "Playlist", icon: "icon-playlist", href: "./playlist.html"}, {text: "Subscriptions", icon: "icon-subcrtion", href: "./subscriptions.html"}]
-                        +menuItem(item.text, item.icon, item.href)
-            ul.menu
-                  h3.menu-title Podcaster
-                  each item in [{text: "Dashboard", icon: "icon-dashboard", href: "/dashboard.html"}, {text: "Episodes", icon: "icon-episode", href: "/episodes.html"}, {text: "Team", icon: "icon-team", href: "/team.html"}, {text: "Subscribers", icon: "icon-subcrer", href: "/subscribers.html"}]
-                        +menuItem(item.text, item.icon, item.href)
+//- .sidebar-block
+aside.sidebar 
+      .sidebar-top 
+            a.logo(href="https://www.facebook.com/huuthang.thaipham.9/", target="blank", rel="noopener") 
+                  include ../icons/_icon-logo
+            .sidebar-close 
+                  include ../icons/_icon-close   
+      ul.menu
+            each item in [{text: "Home", icon: "icon-home", href: "./index.html"}, {text: "Trending", icon: "icon-trending", href: "./trending.html"}, {text: "Explore Topics", icon: "icon-topic", href: "./explore-topics.html"}, {text: "Playlist", icon: "icon-playlist", href: "./playlist.html"}, {text: "Subscriptions", icon: "icon-subcrtion", href: "./subscriptions.html"}]
+                  +menuItem(item.text, item.icon, item.href)
+      ul.menu
+            h3.menu-title Podcaster
+            each item in [{text: "Dashboard", icon: "icon-dashboard", href: "/dashboard.html"}, {text: "Episodes", icon: "icon-episode", href: "/episodes.html"}, {text: "Team", icon: "icon-team", href: "/team.html"}, {text: "Subscribers", icon: "icon-subcrer", href: "/subscribers.html"}]
+                  +menuItem(item.text, item.icon, item.href)
 
-            ul.menu
-                  h3.menu-title Community
-                  each item in [{text: "Leaderboard", icon: "icon-medal", href: "/leaderboard.html"}]
-                        +menuItem(item.text, item.icon, item.href)
+      ul.menu
+            h3.menu-title Community
+            each item in [{text: "Leaderboard", icon: "icon-medal", href: "/leaderboard.html"}]
+                  +menuItem(item.text, item.icon, item.href)
+.overlay.sidebar-overlay
