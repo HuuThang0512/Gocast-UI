@@ -126,6 +126,7 @@ h1, h2, h3, h4, h5, h6 {
 html.dark {
   --logo: #fff;
   --body-bg-color: #242731;
+  --txt-gray2: #A6A7B2;
   --block-border-color: #373A43;
   --search-bg: #373A43;
   --menu-color: #ABABAD;
@@ -141,6 +142,11 @@ html.dark {
   --theme-button-color: #fff;
   --scroolbar-thumb: #6C5DD3;
   --scroolbar-thumb-hover: #A79EE5;
+  --playlist-shadow-1: rgba(8, 8, 9, 0.25);
+  --playlist-shadow-2: rgba(15, 20, 39, 0.20);
+  --playlist-date-color: #A6A7B2;
+  --playlist-episode-count: #fff;
+  --playlist-episode-bg: #373A43;
 }
 
 .button {
@@ -224,6 +230,7 @@ html.dark {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  transition: all 0.15s linear;
 }
 .topbar-logo {
   flex-shrink: 0;

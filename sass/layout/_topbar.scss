@@ -6,6 +6,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    transition: all 0.15s linear;
     &-logo {
         flex-shrink: 0;
         color: var(--logo, #11142D);

@@ -138,3 +138,24 @@ mixin uploadBtn(idBtn = "", classBtn = "", text = "")
             if text        
                 span.btn-upload-text= text
         input(type="file", name="", id= idBtn).upload-input
+
+mixin playlistItem()
+    .playlist-item 
+        .playlist-image
+            img(srcSet="./images/img-playlist-item.png 2x", alt="")
+        .playlist-content 
+            .playlist-top
+                .playlist-title  UIHUT Podcast
+                .playlist-date Created on 1 day ago
+            .playlist-desc UIHUT is a design and coding resources platform for designers, developers, and entrepreneurs.
+            .playlist-footer
+                .playlist-episodes 
+                    img.playlist-episode-item.playlist-episode-image(srcSet="./images/playlist-episode.png 2x", alt="")
+                    img.playlist-episode-item.playlist-episode-image(srcSet="./images/playlist-episode.png 2x", alt="")
+                    img.playlist-episode-item.playlist-episode-image(srcSet="./images/playlist-episode.png 2x", alt="")
+                    img.playlist-episode-item.playlist-episode-image(srcSet="./images/playlist-episode.png 2x", alt="")
+                    .playlist-episode-item.playlist-episode-number 41+
+                .playlist-like
+                    .icon.icon-heart
+                        include ../icons/_icon-heart-fill
+                    span.playlist-count 1.5k    

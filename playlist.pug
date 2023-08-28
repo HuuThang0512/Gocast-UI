@@ -1,10 +1,12 @@
 extends ./views/layout/_dashboard
 
 append stylesheet 
-      link(rel="stylesheet", href="./styles/home.css")
+      link(rel="stylesheet", href="./styles/playlist.css")
 
 block title
       title GocastUI-Playlist
 
 block main 
-      p Playlist
+      .playlist 
+            - for(var i = 0; i < 8; i++)
+                  +playlistItem
