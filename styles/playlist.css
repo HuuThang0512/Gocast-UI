@@ -10,8 +10,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 30px 32px;
-  container-type: inline-size;
-  container-name: playlist;
 }
 @container mainContainer (max-width: 520px) {
   .playlist {
