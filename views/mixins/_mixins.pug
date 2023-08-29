@@ -159,3 +159,14 @@ mixin playlistItem()
                     .icon.icon-heart
                         include ../icons/_icon-heart-fill
                     span.playlist-count 1.5k    
+
+mixin dropDown(text = "", listValue = [])
+    .dropdown-block
+        .dropdown
+            .dropdown-text= text
+            .dropdown-icon
+                include ../icons/_icon-cheveron-down
+        if listValue 
+            ul.dropdown-list 
+                each val in listValue
+                    li.dropdown-value= val

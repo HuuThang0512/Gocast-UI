@@ -7,6 +7,23 @@
     @container mainContainer (max-width: 520px) {
         grid-template-columns: 1fr;
     }
+    &-heading {
+        margin-bottom: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+    &-header {
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.08;
+    }
+    &-hear-sort {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
     &-item{
         display: flex;
         flex-direction: row;
@@ -16,6 +33,7 @@
         border-radius: 10px;
         box-shadow: -10px 24px 35px 0px var(--playlist-shadow-1, rgba(227, 230, 236, 0.25)), -1px -3px 14px 0px var(--playlist-shadow-1, rgba(227, 230, 236, 0.20));
         background-color: var(--body-bg-color, #fff);
+        cursor: pointer;
         @container mainContainer (max-width: 900px) {
             flex-direction: column;
             gap: 32px;

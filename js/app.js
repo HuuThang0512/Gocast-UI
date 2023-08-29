@@ -13,6 +13,9 @@ const feedTabLine = $(".feed-tab-line")
 const sidebarClose = $(".sidebar-close")
 const themeBtn = $(".button-dark-mode")
 const iconHearts = $$(".icon-heart")
+const dropdownBlocks = $$(".dropdown-block")
+const dropdowns = $$(".dropdown")
+const dropdownValues = $$(".dropdown-value")
 
 function changeLineTab() {
     let feedTabActive = $(".feed-tab-item.active")
@@ -103,3 +106,28 @@ iconHearts.forEach((heart) => {
         // heartClickIcon = heart.
     })
 })
+
+// Handle Dropdown
+dropdowns.forEach((dropdown) => {
+    dropdown.addEventListener("click", (e) => {
+        dropdown.classList.toggle("active")
+    })
+})
+dropdownValues.forEach(value => {
+    value.addEventListener("click", (e) => {
+        confirm(value.textContent)
+    })
+})
+document.addEventListener("click", (e) => {
+    const dropdownClick = e.target.closest(".dropdown")
+    if (!dropdownClick) {
+        dropdowns.forEach(dropdown => {
+            if (dropdown.classList.contains("active")) {
+                dropdown.classList.remove("active")
+            }
+        })
+    }
+})
+
+
+

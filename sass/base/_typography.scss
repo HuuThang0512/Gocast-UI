@@ -1,5 +1,5 @@
 @use "../abstracts" as abs;
-body {
+body, a {
       font-family: abs.$font-primary;
       font-size: 15px;
       // color: abs.$text-black1;

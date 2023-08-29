@@ -7,6 +7,13 @@ block title
       title GocastUI-Playlist
 
 block main 
-      .playlist 
-            - for(var i = 0; i < 8; i++)
-                  +playlistItem
+      .playlist-wrapper
+            .playlist-heading 
+                  .playlist-header Playlist 
+                  .playlist-hear-sort 
+                        .playlist-hear Hear your own playlists and the playlists you’ve liked
+                        .playlist-sort
+                              +dropDown("All", ["Popular", "Most liked", "Newest", "Oldest"])
+            .playlist 
+                  - for(var i = 0; i < 8; i++)
+                        +playlistItem
