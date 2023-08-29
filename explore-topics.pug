@@ -1,10 +1,17 @@
 extends ./views/layout/_dashboard
 
 append stylesheet 
-      link(rel="stylesheet", href="./styles/home.css")
+      link(rel="stylesheet", href="./styles/topic.css")
 
 block title
       title GocastUI-Explore Topics
 
 block main 
-      p Explore Topics
+      .topic-wrapper
+            .topic-heading.page-heading
+                  .page-title Explore Topics
+                  .page-heading-desc Most Popular Podcast Topics
+            
+            .topic-main 
+                  - for(var i = 0; i < 24; i++)
+                        +topicItem()

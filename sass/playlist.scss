@@ -8,20 +8,21 @@
         grid-template-columns: 1fr;
     }
     &-heading {
-        margin-bottom: 20px;
+        // margin-bottom: 20px;
         display: flex;
         flex-direction: column;
-        gap: 14px;
-    }
-    &-header {
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 1.08;
+        // gap: 14px;
     }
     &-hear-sort {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        gap: 12px;
+        @container mainContainer (max-width: 520px) {
+            flex-direction: column;
+            align-items: start;
+            gap: 16px;
+        }
     }
 
     &-item{
@@ -140,9 +141,11 @@
     &-episode-image{
   
     }
-    // @media screen and (max-width: 1279.98px) {
-    //     grid-template-columns: 1fr;
-    // }
+    @media screen and (max-width: 1279.98px) {
+        &-wrapper {
+            margin-bottom: 40px;
+        }
+    }
     // @media screen and (max-width: 767.98px) {
     //     grid-template-columns: 1fr;
     //     &-item {

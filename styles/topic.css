@@ -1,0 +1,30 @@
+.topic-wrapper {
+  margin-bottom: 40px;
+}
+.topic-main {
+  --column: 4;
+  display: grid;
+  grid-template-columns: repeat(var(--column), minmax(0, 1fr));
+  grid-gap: 36px;
+}
+@media screen and (max-width: 1279.98px) {
+  .topic-main {
+    --column: 2;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .topic-main {
+    --column: 1;
+  }
+}
+.topic-content {
+  justify-content: center;
+  align-items: center;
+  gap: 4px;
+}
+.topic-title {
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/*# sourceMappingURL=topic.css.map */

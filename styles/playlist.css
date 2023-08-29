@@ -17,20 +17,21 @@
   }
 }
 .playlist-heading {
-  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
-}
-.playlist-header {
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 1.08;
 }
 .playlist-hear-sort {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 12px;
+}
+@container mainContainer (max-width: 520px) {
+  .playlist-hear-sort {
+    flex-direction: column;
+    align-items: start;
+    gap: 16px;
+  }
 }
 .playlist-item {
   display: flex;
@@ -140,6 +141,11 @@
 .playlist-count {
   font-size: 13px;
   color: #A6A7B2;
+}
+@media screen and (max-width: 1279.98px) {
+  .playlist-wrapper {
+    margin-bottom: 40px;
+  }
 }
 
 /*# sourceMappingURL=playlist.css.map */
